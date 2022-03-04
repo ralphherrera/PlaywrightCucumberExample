@@ -1,0 +1,14 @@
+{
+  "name": "playwrightcucumberexample",
+  "version": "1.0.0",
+  "description": "Sample UI Automation Project using Playwright and Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "e2e-test": "playwright test --config=e2e.config.ts"
+  },
+  "author": "Ralph Herrera",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.19.2"
+  }
+}
