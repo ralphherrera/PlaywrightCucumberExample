@@ -1,12 +1,15 @@
 import { PlaywrightTestConfig } from "@playwright/test";
 
+const globalTimeOutMS = 20000;
+
 const config: PlaywrightTestConfig = {
-  timeout: 30000,
+  timeout: globalTimeOutMS,
   retries: 0,
+  testDir: "../tests/e2e",
   use: {
     headless: false,
     ignoreHTTPSErrors: true,
-    actionTimeout: 30000,
+    actionTimeout: globalTimeOutMS,
     viewport: {
       width: 1920,
       height: 1080,
@@ -20,8 +23,11 @@ const config: PlaywrightTestConfig = {
     },
     screenshot: "only-on-failure",
   },
-  reporter: [["html", { outputFolder: "tmp/test-results/"} ]],
-  outputDir: "tmp/test-results/",
+  expect: {
+    timeout: globalTimeOutMS,
+  },
+  outputDir: "../../tmp/test-results/",
+  reporter: "html",
 };
 
 export default config;

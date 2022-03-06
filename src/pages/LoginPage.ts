@@ -22,6 +22,7 @@ export class LoginPage extends Basepage {
   public async openIceHRMPage() {
     console.log("Opening Ice HRM Login Page");
     await this.page.goto("https://icehrm-open.gamonoid.com/login.php");
+
   }
 
   public async login(username: string, password: string) {
@@ -34,7 +35,6 @@ export class LoginPage extends Basepage {
   public async assertInvalidLoginErrorMessage() {
     console.log("Checking if invalid login error message is displayed");
 
-    
     expect(await this.invalidLoginErrorMessage.isVisible({timeout: 5000})).toBe(true);
     console.log(
         `Invalid Login Error message: [${await this.invalidLoginErrorMessage.textContent()}]`
