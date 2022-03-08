@@ -13,7 +13,7 @@ BeforeStep(async () => {
 Given("I open the iCE HRM website", async () => await loginPage.openIceHRMPage());
 
 When("I login as admin", async () => {
-  await loginPage.login("admin", "admins");
+  await loginPage.login("admin", "admin");
 });
 
 Then("I should be redirected to the dashboard page", async () => {
