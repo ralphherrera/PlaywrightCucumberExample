@@ -11,6 +11,7 @@ export class DashboardPage extends Basepage {
   constructor(page: Page) {
     super(page);
     this.loginStatus = page.locator(".user-panel a:nth-child(2)");
+    this.manageEmployeeLink = page.locator("#employeeLink");
     this.manageCompanyLink = page.locator("#companyLink");
     this.manageUsersLink = page.locator("#usersLink");
     this.manageProjectsLink = page.locator("#projectsLink");

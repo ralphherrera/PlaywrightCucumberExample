@@ -1,6 +1,6 @@
 import { test } from "@playwright/test";
-import { DashboardPage } from "../../pages/DashboardPage";
-import { LoginPage } from "../../pages/LoginPage";
+import { DashboardPage } from "../../src/pages/DashboardPage";
+import { LoginPage } from "../../src/pages/LoginPage";
 
 test.describe.parallel.only("Login IceHRM Test", () => {
   let loginPage: LoginPage;
